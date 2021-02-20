@@ -26,7 +26,7 @@ public class CameraController : MonoBehaviour
         }
         if (!Mathf.Approximately(cameraHeight, transform.position.y))
         {
-            transform.position = new Vector3(transform.position.x, .5f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, cameraHeight, transform.position.z);
         }
     }
 }
