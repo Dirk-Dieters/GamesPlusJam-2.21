@@ -123,3 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87981d6f5daa83b4ba372a1ce7c3655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tycoonDropObject: {fileID: 11400000, guid: e2c1fddb2ccc776499bcb1a078fd4c12, type: 2}
