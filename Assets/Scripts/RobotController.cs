@@ -36,19 +36,27 @@ public class RobotController : MonoBehaviour
         {
             Die();
         }
+
+        if (Input.GetKeyDown("r"))
+            Die();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         int damage = (int)(collision.relativeVelocity.magnitude - damageResist);
-        if (damage > 0)
-            HP -= damage;
+        if (damage < 0)
+            damage = 0;
+        Debug.Log(collision.collider);
+        Debug.Log(collision.rigidbody);
+        Debug.Log("Damage: " + damage.ToString());
+        HP -= damage;
     }
 
     void Die()
     {
         Debug.Log("Dead");
         HP = 100;
-        transform.position = startPoint;
+        transform.position = new Vector3(Random.Range(11, 20), 0.2f, Random.Range(11, 20));
+        transform.rotation = Quaternion.Euler(Vector3.zero);
     }
 }
